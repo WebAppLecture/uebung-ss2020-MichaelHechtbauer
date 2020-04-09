@@ -1,22 +1,59 @@
 .gameBox {
+    background: radial-gradient(
+    circle at 100% 100%, 
+    transparent 16%, 
+    rgb(97, 73, 43) 16.2%, 
+    rgb(114, 133, 72) 50%, 
+    rgb(97, 73, 43) 100%
+);
         
 }
 
-.accent {
+.accent:hover {
     /* Position und Größe*/
+    position: relative;
+    right: 5vh;
+    bottom: 5vh;
+    width: 20vh;
+    height: 20vh;
 
-    /* Hintergrund */
+     /*Hintergrund */
+    background-color: lightseagreen;
+    /*border-radius: 10px/20px;*/
+    border-radius: 50%;
 
     /* Border */
+    border-width: 1vh;
+    border-style: dashed;
+    border-color: rgb(0, 38, 255);
+
+    /*Um den Hintergrund nicht hinter der Border zu sehen, setzen wir dessen clip Eingeschaft: */
+    background-clip: padding-box;
 
     /* Material Design */
+    box-shadow: 0 0 0 .8vh inset #999,
+    0 0 .5vh 1.2vh inset #666,
+    0 0 .5vh 3vh inset #aaa,
+    0 0 0 3.5vh inset #666, 
+    0 0 0 4.5vh inset #999,
+    0 0 .5vh 7vh inset #61492b,
+    0 0 0 7vh inset black,
+    0 0 0 8vh inset #aaa;
 
     /* Animation */
+    /*in .accent rufst du animation: rotation linear ... auf und das rotation ruft dann @keyframes rotation auf*/
+    animation: rotation 5s normal linear infinite;             
+    
+    
 
     /* Z-Index */
 
 }
 
 @keyframes rotation {
+    
+    0% {transform:rotate(0deg);}
 
+    100% {transform:rotate(360deg);}
+    
 }
